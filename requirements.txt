@@ -2,3 +2,4 @@ openai>=1.0.0
 streamlit
 watchdog
 python-dotenv
+pylint
