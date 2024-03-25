@@ -1,0 +1,9 @@
+name: chatbot_chatgpt
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10  # or your desired version
+  - pip
+  - pip:
+      - -r requirements.txt  # Make sure this points correctly to your requirements.txt
