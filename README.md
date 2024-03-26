@@ -13,6 +13,9 @@ This project integrates OpenAI's language models into a Streamlit web applicatio
 - **Conversation History**: Maintains a log of the entire conversation for reference.
 - **Conversation Management**: Supports starting new conversations, saving current conversations, renaming them, and switching between them.
 
+![white](images/white.png)
+![dark](images/dark.png)
+
 ## Tech Specs
 
 - **Conda**: Python 3.10
