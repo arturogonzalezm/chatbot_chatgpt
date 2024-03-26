@@ -24,12 +24,12 @@ This project integrates OpenAI's language models into a Streamlit web applicatio
 
 ### OpenAI Integration
 
-- `AsyncOpenAI Client`: Utilizes `openai.AsyncOpenAI` for creating an asynchronous client with the OpenAI API, authorized via an environment-stored API key.
+- `AsyncOpenAI Client`: Utilises `openai.AsyncOpenAI` for creating an asynchronous client with the OpenAI API, authorised via an environment-stored API key.
 - `get_response`: An asynchronous function that sends user messages to the OpenAI API and awaits responses, utilizing the "gpt-4-turbo-preview" model.
 
 ### Streamlit Interface
 
-- **Initialization**: Checks and initializes `session_state` variables for storing conversation histories and saved conversations.
+- **Initialization**: Checks and initialises `session_state` variables for storing conversation histories and saved conversations.
 - **User Input Form**: Allows users to write and submit messages to the chatbot.
 - **Display Area**: Shows the ongoing conversation history.
 - **Sidebar Features**: Provides controls for new conversations, saving current chats, and managing saved conversations.
