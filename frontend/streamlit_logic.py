@@ -3,6 +3,7 @@ import datetime
 import streamlit as st
 
 from backend.chatgpt import get_gpt_response
+from frontend.css.css import custom_css
 
 
 def write_prompt():
@@ -20,7 +21,8 @@ def write_prompt():
             # Check if this conversation is already saved
             if not any(conversation['content'] == chat_content for conversation in st.session_state.conversations):
                 timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                st.session_state.conversations.append({"name": f"Conversation from {timestamp}", "content": chat_content})
+                st.session_state.conversations.append(
+                    {"name": f"Conversation from {timestamp}", "content": chat_content})
                 st.sidebar.success('✅ Conversation saved!')
             else:
                 st.sidebar.info('ℹ️ This conversation is already saved.')
@@ -58,15 +60,5 @@ def write_prompt():
         gpt_response = get_gpt_response(user_input)
         st.session_state.history.append(f"GPT: {gpt_response}")
 
-    # Transparent text area for displaying conversation history
-    custom_css = '''
-        <style>
-            .stTextArea > div > div > textarea {
-                background-color: rgba(0,0,0,0); /* Fully transparent */
-                color: black; /* Ensure text is visible */
-            }
-        </style>
-        '''
     st.markdown(custom_css, unsafe_allow_html=True)
     st.text_area("Conversation:", value="\n".join(st.session_state.history), height=400, key="conversation")
-
