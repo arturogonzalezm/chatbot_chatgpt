@@ -2,13 +2,10 @@ import asyncio
 import os
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
-import streamlit as st
 
 load_dotenv()
 
 client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-st.title("Streamlit Chat")
 
 
 async def get_response(prompt: str) -> str:
