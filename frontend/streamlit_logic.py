@@ -1,7 +1,8 @@
+import datetime
+
 import streamlit as st
 
 from backend.chatgpt import get_gpt_response
-import datetime
 
 
 def write_prompt():
